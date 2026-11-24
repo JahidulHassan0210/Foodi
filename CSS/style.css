@@ -4,23 +4,28 @@
     box-sizing: border-box;
 }
 
-.container {
-    width: 1420px;
-    margin: 0 auto;
+img {
+    max-width: 100%;
+    height: auto;
+}
 
+.container {
+    max-width: 1420px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* ====== Header part start ====== */
 header {
     margin-top: 47px;
-
 }
 
 header nav .nav-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    position: relative;
 }
 
 header nav .nav-wrapper ul {
@@ -36,14 +41,18 @@ header nav .nav-wrapper ul li a {
     text-decoration: none;
     font-family: "Poppins", sans-serif;
     font-size: medium;
-    font-weight: 20px;
+    font-weight: 500;
     color: #272727;
     transition: 0.4s;
 }
 
 header nav .nav-wrapper ul li a:hover {
     color: #39DB4A;
+}
 
+header nav .nav-actions {
+    display: flex;
+    align-items: center;
 }
 
 header nav .nav-wrapper button {
@@ -51,6 +60,7 @@ header nav .nav-wrapper button {
     border: none;
     font-size: 23px;
     color: #272727;
+    cursor: pointer;
 }
 
 header nav .nav-wrapper .cartbtn {
@@ -67,7 +77,9 @@ header nav .nav-wrapper .cartbtn span {
     font-weight: bold;
     color: white;
     border-radius: 50%;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: -10px;
     right: -10px;
@@ -84,21 +96,34 @@ header nav .nav-wrapper .contactbtn span {
     margin-left: 14px;
 }
 
+header nav .menu-toggle {
+    display: none;
+    font-size: 26px;
+    margin-left: 20px;
+    color: #272727;
+}
 /* ====== Header part end ====== */
+
 /* ====== Hero part start ====== */
 #hero .hero-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+#hero .left,
+#hero .right {
+    flex: 1;
 }
 
 #hero .left h1 {
-    width: 596px;
+    max-width: 596px;
     font-family: "Inter", sans-serif;
-    font-weight: 800px;
+    font-weight: 800;
     font-size: 62px;
     line-height: 145.5%;
-
 }
 
 #hero .left h1 span {
@@ -107,23 +132,27 @@ header nav .nav-wrapper .contactbtn span {
 
 #hero .left p {
     font-family: "Inter", sans-serif;
-    font-weight: 500px;
+    font-weight: 500;
     font-size: 26px;
     line-height: 170.5%;
-    margin-top: 59px;
-    margin-bottom: 71px;
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
 
 #hero .left button {
     font-family: "Inter", sans-serif;
     background: transparent;
     border: none;
-    font-weight: 600px;
+    font-weight: 600;
     font-size: 26px;
+    cursor: pointer;
 }
 
 #hero .btn-area {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 #hero .left .orderbtn {
@@ -131,7 +160,6 @@ header nav .nav-wrapper .contactbtn span {
     color: white;
     border-radius: 40px;
     padding: 25px 47px 24px 47px;
-    margin-right: 35px;
     box-shadow: -2px 22px 38px 0px rgba(142, 255, 154, 0.75);
     -webkit-box-shadow: -2px 22px 38px 0px rgba(142, 255, 154, 0.75);
     -moz-box-shadow: -2px 22px 38px 0px rgba(142, 255, 154, 0.75);
@@ -140,7 +168,7 @@ header nav .nav-wrapper .contactbtn span {
 #hero .left .videobtn {
     display: flex;
     align-items: center;
-    gap: 29px;
+    gap: 20px;
 }
 
 #hero .left .videobtn span {
@@ -155,26 +183,27 @@ header nav .nav-wrapper .contactbtn span {
     justify-content: center;
     align-items: center;
 }
-
 /* ====== Hero part end ====== */
+
 /* ====== Categories part start ====== */
 .title h4 {
     font-family: "Inter", sans-serif;
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 20px;
-    letter-spacing: 17.5%;
+    letter-spacing: 0.175em;
     color: #FF6868;
 }
 
 .title h2 {
     font-family: "Inter", sans-serif;
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 60px;
     margin-top: 29px;
+    line-height: 131%;
 }
 
 #catagories {
-    margin-top: 33px;
+    margin-top: 80px;
 }
 
 #catagories .title {
@@ -183,21 +212,21 @@ header nav .nav-wrapper .contactbtn span {
 }
 
 #catagories .title h4 {
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 20px;
-    letter-spacing: 17.5%;
+    letter-spacing: 0.175em;
     color: #FF6868;
 }
 
 #catagories .title h2 {
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 60px;
     margin-top: 29px;
 }
 
 #catagories .categories_item h3 {
     font-family: "Inter", sans-serif;
-    font-weight: 600px;
+    font-weight: 600;
     font-size: 30px;
     margin-top: 13px;
 }
@@ -209,13 +238,12 @@ header nav .nav-wrapper .contactbtn span {
     -webkit-box-shadow: 2px 10px 30px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 2px 10px 30px 0px rgba(0, 0, 0, 0.1);
     border-radius: 40px;
-    padding: 39px 0px 46px 0px;
+    padding: 39px 20px 46px 20px;
 }
-
 
 #catagories .categories_item h4 {
     font-family: "Inter", sans-serif;
-    font-weight: 500px;
+    font-weight: 500;
     font-size: 22px;
     margin-top: 12px;
     color: #555555;
@@ -223,26 +251,36 @@ header nav .nav-wrapper .contactbtn span {
 
 #catagories .catagories_wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
     margin-top: 78px;
-    margin-bottom: 208px;
+    margin-bottom: 80px;
 }
-
 /* ====== Categories part end ====== */
+
 /* ====== Dishes part start ====== */
 #dishes .title h4 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 #dishes .title h2 {
-    width: 580px;
+    max-width: 580px;
+    margin-top: 0;
 }
 
-#dishes .dishes-item-wrapper{
+#dishes .dishes-item-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
     margin-top: 63px;
-    margin-bottom: 221px;
+    margin-bottom: 80px;
+}
+
+#dishes .arrow-btn {
+    display: flex;
+    gap: 30px;
 }
 
 #dishes .arrow-btn button {
@@ -251,40 +289,31 @@ header nav .nav-wrapper .contactbtn span {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 #dishes .arrow-btn .arrow-right {
     background: #39DB4A;
-    border: none;
-    width: 80px;
-    height: 80px;
-    margin-left: 50px;
 }
 
 #dishes .title-arrow-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: flex-end;
+    gap: 20px;
 }
 
 #dishes .dishes-item .dishes-title {
     font-family: "Inter", sans-serif;
-    font-weight: 600px;
+    font-weight: 600;
     font-size: 30px;
-    color: black;
-    margin-top: 25px;
-}
-
-#dishes .dishes-item h4 {
-    font-family: "Inter", sans-serif;
-    font-weight: 600px;
-    font-size: 22px;
     color: black;
     margin-top: 25px;
 }
 
 #dishes .dishes-item {
     width: 446px;
+    max-width: 100%;
     box-shadow: 2px 9px 42px 0px rgba(0, 0, 0, 0.08);
     -webkit-box-shadow: 2px 9px 42px 0px rgba(0, 0, 0, 0.08);
     -moz-box-shadow: 2px 9px 42px 0px rgba(0, 0, 0, 0.08);
@@ -295,19 +324,19 @@ header nav .nav-wrapper .contactbtn span {
     position: relative;
 }
 
-#dishes .dishes-item img{
+#dishes .dishes-item img {
     text-align: center;
 }
 
 #dishes .dishes-item h4 {
     font-family: "Inter", sans-serif;
-    font-weight: 600px;
+    font-weight: 600;
     font-size: 22px;
     color: #555555;
     margin-top: 19px;
 }
 
-#dishes .dishes-item .text-area{
+#dishes .dishes-item .text-area {
     text-align: left;
     padding-left: 46px;
     padding-right: 44px;
@@ -316,31 +345,32 @@ header nav .nav-wrapper .contactbtn span {
 #dishes .dishes-price-rating {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 28px;
 }
 
-#dishes .dishes-price-rating h5{
+#dishes .dishes-price-rating h5 {
     font-family: "Inter", sans-serif;
-    font-weight: 600px;
+    font-weight: 600;
     font-size: 24px;
     color: #454545;
 }
 
-.dishes-price{
+.dishes-price {
     font-family: "Inter", sans-serif;
-    font-weight: 600px;
+    font-weight: 600;
     font-size: 30px;
     color: black;
 }
 
-.dishes-price span{
+.dishes-price span {
     color: #FF6868;
     font-family: "Inter", sans-serif;
-    font-weight: 600px;
+    font-weight: 600;
     font-size: 24px;
 }
 
-.dishes-wishlist{
+.dishes-wishlist {
     width: 87px;
     height: 77px;
     background: #39DB4A;
@@ -354,3 +384,394 @@ header nav .nav-wrapper .contactbtn span {
     align-items: center;
 }
 /* ====== Dishes part end ====== */
+
+/* ====== Testimonials part start ====== */
+.testimonials-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.testimonials-wrapper .left,
+.testimonials-wrapper .right {
+    flex: 1;
+}
+
+.testimonials-wrapper .right h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.175em;
+    color: #FF6868;
+    margin-bottom: 30px;
+}
+
+.testimonials-wrapper .right h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 131%;
+}
+
+.testimonials-wrapper .right p {
+    font-family: "Inter", sans-serif;
+    max-width: 655px;
+    font-weight: 500;
+    font-size: 27px;
+    color: #555555;
+    line-height: 159%;
+    margin-top: 35px;
+}
+
+.testimonials-wrapper .right .feedback {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 33px;
+    gap: 30px;
+}
+
+.testimonials-wrapper .right .feedback h4 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 13px;
+}
+
+.testimonials-wrapper .right .feedback h5 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #454545;
+}
+
+.testimonials-wrapper .right .feedback span {
+    padding-right: 17px;
+    padding-left: 15px;
+}
+/* ====== Testimonials part end ====== */
+
+/* ====== Story part start ====== */
+.story-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.story-wrapper .left,
+.story-wrapper .right {
+    flex: 1;
+}
+
+.story-wrapper .left h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.175em;
+    color: #FF6868;
+    margin-bottom: 30px;
+}
+
+.story-wrapper .left h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 35px;
+    line-height: 125%;
+}
+
+.story-wrapper .left p {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: #555555;
+    line-height: 160%;
+    margin-bottom: 40px;
+}
+
+.story-wrapper .left button {
+    background: #39DB4A;
+    color: white;
+    padding: 25px 60px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+}
+/* ====== Story part end ====== */
+
+/* ====== Footer part start ====== */
+.footer-wrapper .up {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-wrapper .up p {
+    max-width: 302px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #555555;
+    line-height: 150.5%;
+    margin-top: 37px;
+}
+
+.footer-wrapper .up h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.footer-wrapper .up li {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #555555;
+    text-decoration: none;
+    list-style: none;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.footer-wrapper .down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 80px;
+    margin-bottom: 47px;
+    padding: 0 20px;
+}
+
+.footer-wrapper .down h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #555555;
+}
+/* ====== Footer part end ====== */
+
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================= */
+
+/* Small Laptops & Large Tablets (max-width: 1200px) */
+@media (max-width: 1200px) {
+    header nav .nav-wrapper ul {
+        gap: 30px;
+    }
+
+    header nav .nav-wrapper .cartbtn {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    #hero .left h1,
+    .title h2,
+    #catagories .title h2,
+    .testimonials-wrapper .right h3,
+    .story-wrapper .left h3 {
+        font-size: 46px;
+    }
+
+    #hero .left p,
+    .testimonials-wrapper .right p,
+    .story-wrapper .left p {
+        font-size: 21px;
+    }
+}
+
+/* Tablets Portrait (max-width: 992px) */
+@media (max-width: 992px) {
+    header {
+        margin-top: 25px;
+    }
+
+    header nav .menu-toggle {
+        display: block;
+    }
+
+    header nav .nav-wrapper ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 25px 0;
+        margin-top: 15px;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    header nav .nav-wrapper ul.active {
+        display: flex;
+    }
+
+    #hero .hero-wrapper,
+    .testimonials-wrapper,
+    .story-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #hero .left h1,
+    .testimonials-wrapper .right p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #hero .btn-area,
+    .testimonials-wrapper .right .feedback {
+        justify-content: center;
+    }
+
+    .story-wrapper .left {
+        order: 1;
+    }
+
+    .story-wrapper .right {
+        order: 2;
+    }
+
+    #dishes .title-arrow-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #dishes .arrow-btn button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer-wrapper .down {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    header nav .nav-wrapper .cartbtn {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    header nav .nav-wrapper .contactbtn {
+        padding: 10px 16px;
+        font-size: 15px;
+    }
+
+    header nav .nav-wrapper .contactbtn span {
+        margin-left: 6px;
+    }
+
+    header nav .menu-toggle {
+        margin-left: 15px;
+    }
+
+    #hero .left h1,
+    .title h2,
+    #catagories .title h2,
+    .testimonials-wrapper .right h3,
+    .story-wrapper .left h3 {
+        font-size: 34px;
+    }
+
+    #hero .left p,
+    .testimonials-wrapper .right p,
+    .story-wrapper .left p {
+        font-size: 18px;
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+
+    #hero .left button,
+    .story-wrapper .left button {
+        font-size: 18px;
+    }
+
+    #hero .left .orderbtn,
+    .story-wrapper .left button {
+        padding: 18px 32px;
+    }
+
+    #hero .left .videobtn span {
+        width: 60px;
+        height: 60px;
+    }
+
+    #catagories .categories_item {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    #dishes .dishes-item .text-area {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    #dishes .dishes-item .dishes-title,
+    .dishes-price,
+    .testimonials-wrapper .right .feedback h4 {
+        font-size: 24px;
+    }
+
+    .footer-wrapper .up {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-wrapper .up p,
+    .footer-wrapper .up li {
+        font-size: 18px;
+    }
+
+    .footer-wrapper .down h2 {
+        font-size: 16px;
+    }
+}
+
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    #hero .left h1,
+    .title h2,
+    #catagories .title h2,
+    .testimonials-wrapper .right h3,
+    .story-wrapper .left h3 {
+        font-size: 28px;
+    }
+
+    .title h4,
+    #catagories .title h4,
+    .testimonials-wrapper .right h2,
+    .story-wrapper .left h2 {
+        font-size: 16px;
+    }
+
+    #hero .btn-area {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #hero .left .orderbtn {
+        width: 100%;
+    }
+}
